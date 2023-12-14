@@ -1,0 +1,33 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  name: tanzu-java-web-app.default.tap.20231214204246.0.0+build.4be3f20
+spec:
+  refName: tanzu-java-web-app.default.tap
+  version: 20231214204246.0.0+build.4be3f20
+  releaseNotes: |
+    Release v20231214204246.0.0+build.4be3f20 of package tanzu-java-web-app.default.tap
+  template:
+    spec:
+      fetch:
+      - imgpkgBundle:
+          image: harbor.ryanbaker.io/tap-apps/workloads/tanzu-java-web-app-default-bundle@sha256:2ef540c8a44df83d03769c62cc75d1a0ef4af386dc1aa3db49a763a4b8a89ea7
+      template:
+      - ytt:
+          paths:
+          - .
+      - kbld:
+          paths:
+          - .imgpkg/images.yml
+          - '-'
+      deploy:
+      - kapp: {}
+  valuesSchema:
+    openAPIv3:
+      type: object
+      additionalProperties: false
+      properties:
+        workload_name:
+          type: string
+          default: ""
+
