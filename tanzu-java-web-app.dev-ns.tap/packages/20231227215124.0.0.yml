@@ -1,12 +1,12 @@
 apiVersion: data.packaging.carvel.dev/v1alpha1
 kind: Package
 metadata:
-  name: tanzu-java-web-app.dev-ns.tap.20231227215124.0.0+build.4be3f20
+  name: tanzu-java-web-app.dev-ns.tap.20231227215124.0.0
 spec:
   refName: tanzu-java-web-app.dev-ns.tap
-  version: 20231227215124.0.0+build.4be3f20
+  version: 20231227215124.0.0
   releaseNotes: |
-    Release v20231227215124.0.0+build.4be3f20 of package tanzu-java-web-app.dev-ns.tap
+    Release v20231227215124.0.0 of package tanzu-java-web-app.dev-ns.tap
   template:
     spec:
       fetch:

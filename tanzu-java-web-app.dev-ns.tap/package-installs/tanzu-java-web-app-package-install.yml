@@ -20,6 +20,7 @@ metadata:
 stringData:
  values.yaml: |
    ---
+   workload_name: tanzu-java-web-app
    replicas: 1
    hostname: ""
-   workload_name: tanzu-java-web-app
+   
