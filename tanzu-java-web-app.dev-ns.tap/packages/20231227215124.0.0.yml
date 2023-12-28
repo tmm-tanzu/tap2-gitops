@@ -28,6 +28,15 @@ spec:
       additionalProperties: false
       properties:
         workload_name:
+          title: Workload name
+          type: string
+          default: ""
+        replicas:
+          title: Replicas
+          type: integer
+          default: 1
+        hostname:
+          title: Hostname
           type: string
           default: ""
 
