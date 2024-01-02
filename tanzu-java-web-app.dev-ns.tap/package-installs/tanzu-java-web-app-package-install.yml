@@ -21,6 +21,6 @@ stringData:
  values.yaml: |
    ---
    workload_name: tanzu-java-web-app
-   replicas: 1
-   hostname: ""
+  #  replicas: 1
+  #  hostname: ""
    
