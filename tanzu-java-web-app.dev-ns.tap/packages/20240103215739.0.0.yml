@@ -1,12 +1,12 @@
 apiVersion: data.packaging.carvel.dev/v1alpha1
 kind: Package
 metadata:
-  name: tanzu-java-web-app.dev-ns.tap.20240103215739.0.0+build.ec2d1af
+  name: tanzu-java-web-app.dev-ns.tap.20240103215739.0.0
 spec:
   refName: tanzu-java-web-app.dev-ns.tap
-  version: 20240103215739.0.0+build.ec2d1af
+  version: 20240103215739.0.0
   releaseNotes: |
-    Release v20240103215739.0.0+build.ec2d1af of package tanzu-java-web-app.dev-ns.tap
+    Release v20240103215739.0.0 of package tanzu-java-web-app.dev-ns.tap
   template:
     spec:
       fetch:
@@ -21,7 +21,8 @@ spec:
           - .imgpkg/images.yml
           - '-'
       deploy:
-      - kapp: {}
+      - kapp:
+          rawOptions: ["--wait=false"]
   valuesSchema:
     openAPIv3:
       type: object
@@ -67,4 +68,3 @@ spec:
               default:
               - protocol: https
                 name: default-gateway
-
