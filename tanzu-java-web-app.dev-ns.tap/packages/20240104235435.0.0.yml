@@ -1,12 +1,12 @@
 apiVersion: data.packaging.carvel.dev/v1alpha1
 kind: Package
 metadata:
-  name: tanzu-java-web-app.dev-ns.tap.20240104235435.0.0
+  name: tanzu-java-web-app.dev-ns.tap.20240104235435.0.0+build.0784f7f
 spec:
   refName: tanzu-java-web-app.dev-ns.tap
-  version: 20240104235435.0.0
+  version: 20240104235435.0.0+build.0784f7f
   releaseNotes: |
-    Release v20240104235435.0.0 of package tanzu-java-web-app.dev-ns.tap
+    Release v20240104235435.0.0+build.0784f7f of package tanzu-java-web-app.dev-ns.tap
   template:
     spec:
       fetch:
@@ -67,3 +67,4 @@ spec:
               default:
               - protocol: https
                 name: default-gateway
+
